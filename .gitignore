@@ -1,0 +1,11 @@
+# Ignore simulator clone repo inside this one
+rp2040pio/
+
+# Asembled pio programs
+*.hex
+
+# Compiled java classes
+*.class
+
+# Log files
+*.log
