@@ -1,0 +1,54 @@
+.define IRQ_RX_BS_ERR 0
+
+.program usb_rx
+
+.wrap_target
+start:
+    wait 1 pin 0 [7]            ; Wait for idle state, then delay till next bit
+    wait 0 pin 0                ; Wait for sop bit edge
+
+pin_went_low:
+    in null 1                   ; Shift zero into ISR
+
+pin_low_after_bs:
+    set y 9                     ; Load edge timeout, aiming for middle of next bit, 16 cycles (to next expected edge) + 8 cycles (to middle of bit)
+    set x 5                     ; Reset consequtive ones counter
+
+pin_low:
+    jmp pin pin_went_high       ; Jump if the pin is now high
+    jmp y-- pin_low             ; Continue monitoring pin while timeout non-zero
+    in y 1                      ; Shift one into ISR (jmp y-- will have caused y to wrap to 0xFFFFFFFF)
+    set y 5                     ; Load edge timeout, aiming for middle of next bit, 16 cycles (from middle of this bit to middle of next), subtracting and dividing by instruction execution count
+    jmp x-- pin_low             ; Decrement consequtive ones counter, continuing if non-zero
+
+pin_low_bs:
+    jmp pin pin_high_after_bs   ; Jump if pin high (edge found), skipping storing stuff bit
+    jmp y-- pin_low_bs          ; Continue monitoring pin while timeout non-zero
+    jmp bs_err                  ; No edge within timeout, bit-stuffing error caught
+
+pin_went_high:
+    in null 1                   ; Shift zero into ISR
+
+pin_high_after_bs:
+    set y 9                     ; Load edge timeout, aiming for middle of next bit, 16 cycles (to next expected edge) + 4 cycles (to middle of bit), subtracting and dividing by instruction execution count
+    set x 5                     ; Reset consequtive ones counter
+
+pin_high:
+    jmp pin pin_still_high      ; Jump if the pin is now low (or jump over unconditional jump)
+    jmp pin_went_low
+pin_still_high:
+    jmp y-- pin_high            ; Continue monitoring pin while timeout non-zero
+    in y 1                      ; Shift one into ISR (jmp y-- will have caused y to wrap to 0xFFFFFFFF)
+    set y 5 [1]                    ; Load edge timeout, aiming for middle of next bit, 16 cycles (from middle of this bit to middle of next), subtracting and dividing by instruction execution count
+    jmp x-- pin_high            ; Decrement consequtive ones counter, continuing if non-zero
+
+pin_high_bs:
+    jmp pin pin_still_high_bs   ; Jump if the pin is now low (or jump over unconditional jump), edge found, skipping storing stuff bit
+    jmp pin_low_after_bs
+pin_still_high_bs:
+    jmp y-- pin_high_bs         ; Continue monitoring pin while timeout non-zero
+    ; Fallthrough
+
+bs_err:
+    irq wait IRQ_RX_BS_ERR      ; Set bit stuffing error IRQ and wait for host to acknowledge
+.wrap

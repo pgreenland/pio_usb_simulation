@@ -1,0 +1,74 @@
+# Run with:
+# script -d -f usb_rx.mon
+# or: java -jar rp2040pio_monitor.jar -f usb_rx.mon
+
+# In a second window, trace enough clock cycles to reach the end of the file
+# trace -c 10000
+
+# Make a full reset of the emulator.
+reset
+
+# Load from hex file
+load -f usb_rx.hex
+
+# Just for convince and verification, list the program that
+# we just entered, as viewed by PIO 0, SM 0.
+unassemble --pio=0 --sm=0 --address=0 --count=32
+
+# Configure Wrap.
+wrap --pio=0 --sm=0 --wrap=25 --target=0
+
+# Set consecutive pindirs, here just a single one.
+gpio --pio=0 --gpio=0 --disable # set direction in
+
+# Connect GPIO 0 with PIO 0
+gpio --pio=0 --gpio=0 --init
+
+# SM Config Set JMP PIN (for JMP).
+pinctrl --pio=0 --sm=0 --jmp-pin=0
+
+# Configure in shift.
+fifo --pio=0 --sm=0 --rx --shift-right
+fifo --pio=0 --sm=0 --rx --auto=true
+fifo --pio=0 --sm=0 --rx --threshold=8
+
+# Join FIFO RX (extend RX FIFO with space from TX FIFO)
+fifo --join --rx
+
+# Run with no clock division, to make simulation simpler
+clock --pio=0 --sm=0 --divider=1
+
+# Disable state machine 0 of PIO 0 while executing the following
+sm --pio=0 --sm=0 --enable=false
+
+# Clear FIFOs.
+fifo --pio=0 --sm=0 --clear
+
+# Clear FIFO debug flags.
+fifo --pio=0 --sm=0 --clear-tx-stall
+fifo --pio=0 --sm=0 --clear-tx-over
+fifo --pio=0 --sm=0 --clear-rx-under
+fifo --pio=0 --sm=0 --clear-rx-stall
+
+# Restart SM.
+sm --pio=0 --sm=0 --restart
+
+# Restart clock.
+clock --pio=0 --sm=0 --restart
+
+# Set instruction pointer (PC) to address 0.
+registers --pio=0 --sm=0 --address=0
+
+# Enable state machine 0 of PIO 0 to execute the program.
+sm --pio=0 --sm=0 --enable=true
+
+########
+# End of program initialization.
+# Next, we feed in example data.
+########
+
+# Load simulation converted from saleae logic CSV
+script -d -f usb_packet.sim
+
+# Done.
+# quit
