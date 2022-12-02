@@ -10,6 +10,7 @@ With documentation: https://rp2040pio-docs.readthedocs.io/
 
 * FIFODumper.java - Small utility which dumps the PIO RX fifo to a file. You can read the fifo directly in the simulator, but for lager packets I've found having it in a file is useful.
 * saleae_logic_csv_to_sim_script.py - Original data was captured with a Saleae Logic analyser and exported to a CSV file. This tool converts it to a simulation script.
+    * Line 44 sets the timing, converting seconds to clock cycles. It's currently set at 16 x oversampling given a 1.5Mhz signal.
 * usb_packet_saleae.csv - Example capture from a cheap keyboard. Saleae Logic export of D- channel.
 * usb_packet.sim - Result of saleae_logic_csv_to_sim_script.py ran against usb_packet_saleae.csv.
 * usb_rx.mon - Simulation script, configuring the virtual PIO module and feeding in the simulation data.
@@ -101,7 +102,25 @@ With documentation: https://rp2040pio-docs.readthedocs.io/
     java -jar rp2040pio/jar/rp2040pio_monitor.jar
     ```
 
-    and execute a number of cycles:
+    And execute a number of cycles:
     ```
     trace -c 2000
     ```
+
+    Having tried both methods, while making these notes, there may be something odd going on.
+    In that the fifo.log file doesn't contain the same contents when "trace -c 2000" is executed.
+    Clicking the emulate button within the "Diagram Creator", with 500 cycle blocks leads to the fifo.log containing the output that Saleae Logic's decoder caculated.
+
+    For reference the included samples should be decoded as:
+    * 0x80
+    * 0xc3
+    * 0x80
+    * 0x06
+    * 0x00
+    * 0x01
+    * 0x00
+    * 0x00
+    * 0x12
+    * 0x00
+    * 0xe0
+    * 0xf4

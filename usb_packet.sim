@@ -1,140 +1,316 @@
-# Time: 5.0293878 - Val: True - Delay MicroSecs: 2.6799999996995894 - Delay Cycles: 64 - Start Cycle: 0 - End Cycle: 64
+# Time: 2.411492466 - Val: True - Delay MicroSecs: 2.253999999979328 - Delay Cycles: 54 - Start Cycle: 0 - End Cycle: 54
 gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 64
+wait --address=0x58000000 --value=0x1 --cycles 54
 
-# Time: 5.02939048 - Val: False - Delay MicroSecs: 0.629999999723907 - Delay Cycles: 15 - Start Cycle: 64 - End Cycle: 79
+# Time: 2.41149472 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 54 - End Cycle: 70
 gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02939111 - Val: True - Delay MicroSecs: 0.7000000001866624 - Delay Cycles: 17 - Start Cycle: 79 - End Cycle: 96
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02939181 - Val: False - Delay MicroSecs: 0.6399999996631323 - Delay Cycles: 15 - Start Cycle: 96 - End Cycle: 111
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02939245 - Val: True - Delay MicroSecs: 0.6900000002474371 - Delay Cycles: 17 - Start Cycle: 111 - End Cycle: 128
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02939314 - Val: False - Delay MicroSecs: 0.6400000005513107 - Delay Cycles: 15 - Start Cycle: 128 - End Cycle: 143
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02939378 - Val: True - Delay MicroSecs: 0.6899999993592587 - Delay Cycles: 17 - Start Cycle: 143 - End Cycle: 160
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02939447 - Val: False - Delay MicroSecs: 2.6499999998819135 - Delay Cycles: 64 - Start Cycle: 160 - End Cycle: 224
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 64
-
-# Time: 5.02939712 - Val: True - Delay MicroSecs: 0.6800000003082118 - Delay Cycles: 16 - Start Cycle: 224 - End Cycle: 240
+# Time: 2.41149539 - Val: True - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 70 - End Cycle: 86
 gpio --gpio=0 --set
 wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.0293978 - Val: False - Delay MicroSecs: 0.6399999996631323 - Delay Cycles: 15 - Start Cycle: 240 - End Cycle: 255
+# Time: 2.41149606 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 86 - End Cycle: 102
 gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02939844 - Val: True - Delay MicroSecs: 0.6800000003082118 - Delay Cycles: 16 - Start Cycle: 255 - End Cycle: 271
+# Time: 2.41149672 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 102 - End Cycle: 118
 gpio --gpio=0 --set
 wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02939912 - Val: False - Delay MicroSecs: 1.9900000003403306 - Delay Cycles: 48 - Start Cycle: 271 - End Cycle: 319
+# Time: 2.41149739 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 118 - End Cycle: 134
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41149806 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 134 - End Cycle: 150
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41149872 - Val: False - Delay MicroSecs: 2.6700000002044533 - Delay Cycles: 64 - Start Cycle: 150 - End Cycle: 214
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 64
+
+# Time: 2.41150139 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 214 - End Cycle: 230
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41150206 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 230 - End Cycle: 246
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41150272 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 246 - End Cycle: 262
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41150339 - Val: False - Delay MicroSecs: 1.9999999998354667 - Delay Cycles: 48 - Start Cycle: 262 - End Cycle: 310
 gpio --gpio=0 --clear
 wait --address=0x58000000 --value=0x1 --cycles 48
 
-# Time: 5.02940111 - Val: True - Delay MicroSecs: 0.6799999994200334 - Delay Cycles: 16 - Start Cycle: 319 - End Cycle: 335
+# Time: 2.41150539 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 310 - End Cycle: 326
 gpio --gpio=0 --set
 wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02940179 - Val: False - Delay MicroSecs: 1.3000000000928935 - Delay Cycles: 31 - Start Cycle: 335 - End Cycle: 366
+# Time: 2.41150606 - Val: False - Delay MicroSecs: 0.6600000004297613 - Delay Cycles: 16 - Start Cycle: 326 - End Cycle: 342
 gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 31
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02940309 - Val: True - Delay MicroSecs: 0.6900000002474371 - Delay Cycles: 17 - Start Cycle: 366 - End Cycle: 383
+# Time: 2.41150672 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 342 - End Cycle: 358
 gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02940378 - Val: False - Delay MicroSecs: 1.9699999995737016 - Delay Cycles: 47 - Start Cycle: 383 - End Cycle: 430
+# Time: 2.41150739 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 358 - End Cycle: 374
 gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 47
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02940575 - Val: True - Delay MicroSecs: 0.6900000002474371 - Delay Cycles: 17 - Start Cycle: 430 - End Cycle: 447
+# Time: 2.41150806 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 374 - End Cycle: 390
 gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02940644 - Val: False - Delay MicroSecs: 0.6400000005513107 - Delay Cycles: 15 - Start Cycle: 447 - End Cycle: 462
+# Time: 2.41150872 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 390 - End Cycle: 406
 gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
+wait --address=0x58000000 --value=0x1 --cycles 16
 
-# Time: 5.02940708 - Val: True - Delay MicroSecs: 0.6899999993592587 - Delay Cycles: 17 - Start Cycle: 462 - End Cycle: 479
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02940777 - Val: False - Delay MicroSecs: 0.6400000005513107 - Delay Cycles: 15 - Start Cycle: 479 - End Cycle: 494
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02940841 - Val: True - Delay MicroSecs: 0.6899999993592587 - Delay Cycles: 17 - Start Cycle: 494 - End Cycle: 511
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.0294091 - Val: False - Delay MicroSecs: 0.6400000005513107 - Delay Cycles: 15 - Start Cycle: 511 - End Cycle: 526
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02940974 - Val: True - Delay MicroSecs: 0.6900000002474371 - Delay Cycles: 17 - Start Cycle: 526 - End Cycle: 543
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02941043 - Val: False - Delay MicroSecs: 0.6399999996631323 - Delay Cycles: 15 - Start Cycle: 543 - End Cycle: 558
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02941107 - Val: True - Delay MicroSecs: 0.6900000002474371 - Delay Cycles: 17 - Start Cycle: 558 - End Cycle: 575
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02941176 - Val: False - Delay MicroSecs: 0.6399999996631323 - Delay Cycles: 15 - Start Cycle: 575 - End Cycle: 590
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.0294124 - Val: True - Delay MicroSecs: 1.34999999978902 - Delay Cycles: 32 - Start Cycle: 590 - End Cycle: 622
+# Time: 2.41150939 - Val: True - Delay MicroSecs: 1.3299999999105694 - Delay Cycles: 32 - Start Cycle: 406 - End Cycle: 438
 gpio --gpio=0 --set
 wait --address=0x58000000 --value=0x1 --cycles 32
 
-# Time: 5.02941375 - Val: False - Delay MicroSecs: 1.3100000000321188 - Delay Cycles: 31 - Start Cycle: 622 - End Cycle: 653
+# Time: 2.41151072 - Val: False - Delay MicroSecs: 2.000000000279556 - Delay Cycles: 48 - Start Cycle: 438 - End Cycle: 486
 gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 31
+wait --address=0x58000000 --value=0x1 --cycles 48
 
-# Time: 5.02941506 - Val: True - Delay MicroSecs: 4.67000000003992 - Delay Cycles: 112 - Start Cycle: 653 - End Cycle: 765
+# Time: 2.41151272 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 486 - End Cycle: 502
 gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151339 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 502 - End Cycle: 518
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151406 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 518 - End Cycle: 534
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151472 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 534 - End Cycle: 550
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151539 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 550 - End Cycle: 566
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151606 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 566 - End Cycle: 582
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151672 - Val: True - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 582 - End Cycle: 598
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151739 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 598 - End Cycle: 614
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151806 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 614 - End Cycle: 630
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151872 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 630 - End Cycle: 646
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41151939 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 646 - End Cycle: 662
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152006 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 662 - End Cycle: 678
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152072 - Val: True - Delay MicroSecs: 1.3399999998497947 - Delay Cycles: 32 - Start Cycle: 678 - End Cycle: 710
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 32
+
+# Time: 2.41152206 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 710 - End Cycle: 726
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152272 - Val: True - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 726 - End Cycle: 742
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152339 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 742 - End Cycle: 758
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152406 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 758 - End Cycle: 774
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152472 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 774 - End Cycle: 790
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152539 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 790 - End Cycle: 806
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152606 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 806 - End Cycle: 822
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152672 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 822 - End Cycle: 838
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152739 - Val: False - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 838 - End Cycle: 854
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152806 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 854 - End Cycle: 870
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152872 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 870 - End Cycle: 886
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41152939 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 886 - End Cycle: 902
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153006 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 902 - End Cycle: 918
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153072 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 918 - End Cycle: 934
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153139 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 934 - End Cycle: 950
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153206 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 950 - End Cycle: 966
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153272 - Val: False - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 966 - End Cycle: 982
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153339 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 982 - End Cycle: 998
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153406 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 998 - End Cycle: 1014
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153472 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1014 - End Cycle: 1030
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153539 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1030 - End Cycle: 1046
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153606 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 1046 - End Cycle: 1062
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153672 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1062 - End Cycle: 1078
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153739 - Val: True - Delay MicroSecs: 1.3299999999105694 - Delay Cycles: 32 - Start Cycle: 1078 - End Cycle: 1110
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 32
+
+# Time: 2.41153872 - Val: False - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 1110 - End Cycle: 1126
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41153939 - Val: True - Delay MicroSecs: 1.3299999999105694 - Delay Cycles: 32 - Start Cycle: 1126 - End Cycle: 1158
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 32
+
+# Time: 2.41154072 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1158 - End Cycle: 1174
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154139 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1174 - End Cycle: 1190
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154206 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 1190 - End Cycle: 1206
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154272 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1206 - End Cycle: 1222
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154339 - Val: False - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 1222 - End Cycle: 1238
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154406 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 1238 - End Cycle: 1254
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154472 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1254 - End Cycle: 1270
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154539 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1270 - End Cycle: 1286
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154606 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 1286 - End Cycle: 1302
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154672 - Val: True - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1302 - End Cycle: 1318
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154739 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1318 - End Cycle: 1334
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154806 - Val: True - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 1334 - End Cycle: 1350
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154872 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1350 - End Cycle: 1366
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41154939 - Val: True - Delay MicroSecs: 0.6700000003689865 - Delay Cycles: 16 - Start Cycle: 1366 - End Cycle: 1382
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41155006 - Val: False - Delay MicroSecs: 0.659999999985672 - Delay Cycles: 16 - Start Cycle: 1382 - End Cycle: 1398
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41155072 - Val: True - Delay MicroSecs: 2.669999999760364 - Delay Cycles: 64 - Start Cycle: 1398 - End Cycle: 1462
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 64
+
+# Time: 2.41155339 - Val: False - Delay MicroSecs: 0.6699999999248973 - Delay Cycles: 16 - Start Cycle: 1462 - End Cycle: 1478
+gpio --gpio=0 --clear
+wait --address=0x58000000 --value=0x1 --cycles 16
+
+# Time: 2.41155406 - Val: True - Delay MicroSecs: 1.3300000003546586 - Delay Cycles: 32 - Start Cycle: 1478 - End Cycle: 1510
+gpio --gpio=0 --set
+wait --address=0x58000000 --value=0x1 --cycles 32
+
+# Time: 2.41155539 - Val: False - Delay MicroSecs: 4.669999999595831 - Delay Cycles: 112 - Start Cycle: 1510 - End Cycle: 1622
+gpio --gpio=0 --clear
 wait --address=0x58000000 --value=0x1 --cycles 112
 
-# Time: 5.02941973 - Val: False - Delay MicroSecs: 0.629999999723907 - Delay Cycles: 15 - Start Cycle: 765 - End Cycle: 780
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02942036 - Val: True - Delay MicroSecs: 0.7000000001866624 - Delay Cycles: 17 - Start Cycle: 780 - End Cycle: 797
+# Time: 2.41156006 - Val: True - Delay MicroSecs: 3.0200000002977845 - Delay Cycles: 72 - Start Cycle: 1622 - End Cycle: 1694
 gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 17
-
-# Time: 5.02942106 - Val: False - Delay MicroSecs: 0.6300000006120854 - Delay Cycles: 15 - Start Cycle: 797 - End Cycle: 812
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 15
-
-# Time: 5.02942169 - Val: True - Delay MicroSecs: 1.34999999978902 - Delay Cycles: 32 - Start Cycle: 812 - End Cycle: 844
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 32
-
-# Time: 5.02942304 - Val: False - Delay MicroSecs: 1.3100000000321188 - Delay Cycles: 31 - Start Cycle: 844 - End Cycle: 875
-gpio --gpio=0 --clear
-wait --address=0x58000000 --value=0x1 --cycles 31
-
-# Time: 5.02942435 - Val: True - Delay MicroSecs: 2.389999999685699 - Delay Cycles: 57 - Start Cycle: 875 - End Cycle: 932
-gpio --gpio=0 --set
-wait --address=0x58000000 --value=0x1 --cycles 57
+wait --address=0x58000000 --value=0x1 --cycles 72
 

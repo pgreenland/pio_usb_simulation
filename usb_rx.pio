@@ -39,7 +39,7 @@ pin_high:
 pin_still_high:
     jmp y-- pin_high            ; Continue monitoring pin while timeout non-zero
     in y 1                      ; Shift one into ISR (jmp y-- will have caused y to wrap to 0xFFFFFFFF)
-    set y 5 [1]                    ; Load edge timeout, aiming for middle of next bit, 16 cycles (from middle of this bit to middle of next), subtracting and dividing by instruction execution count
+    set y 5 [1]                 ; Load edge timeout, aiming for middle of next bit, 16 cycles (from middle of this bit to middle of next), subtracting and dividing by instruction execution count
     jmp x-- pin_high            ; Decrement consequtive ones counter, continuing if non-zero
 
 pin_high_bs:
